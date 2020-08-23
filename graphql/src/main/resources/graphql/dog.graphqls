@@ -1,0 +1,19 @@
+type Dawg {
+ id: ID!
+ name: String!
+ breed: String!
+ origin: String!
+}
+
+type Query {
+ findAllDawgs: [Dawg]!
+ findDawgById(id:ID!): Dawg!
+}
+
+type Mutation {
+ newDawg(name:String!, breed:String!, origin:String!) : Dawg!
+ deleteDawgBreed(breed: String!) : Boolean
+ updateDawgName(newName: String!, id:ID!) : Dawg!
+}
+
+
